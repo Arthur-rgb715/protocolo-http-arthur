@@ -1,8 +1,8 @@
 import http from 'http';
+import {routes} from './routes/routes.js';
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end('Hello, World!\n');
+  routes(req, res);
 });
 
 server.listen(3000, () => {
